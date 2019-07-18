@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task status</title>
+</head>
+<body>
+    {% if ImageRequest.status == 1 %}
+    <p> Task completed </p>
+    <img src="{{ url_for('static', filename=ImageRequest.img_path) }}" alt="image">
+    {% else %}
+    <p> Task in process </p>
+    {% endif %}
+</body>
+</html>
